@@ -1,0 +1,58 @@
+// Reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Common
+body {
+    font-size: 15px;
+    background-color: #f2f2f2;
+}
+
+// Header
+.header {
+    background-color: #262626;
+    height: 50px;
+
+    .menu {
+        list-style: none;
+        padding: 0 20px;
+        
+        & > li {
+            display: inline-block;
+            margin-right: 10px;
+            line-height: 50px;
+            
+            & > a {
+                text-decoration: none;
+                color: #f2f2f2;
+            }
+        }
+
+        & > li:nth-last-child(-n+2) {
+            float: right;
+        }
+    }
+}
+
+// Footer
+.footer {
+    background-color: #262626;
+    height: 50px;
+    padding: 0 20px;
+
+    & > p {
+        line-height: 50px;
+        color: #f2f2f2;
+    }
+}
+
+// Router view
+.router {
+    display: block;
+    height: calc(100vh - (50px * 2));
+    margin: 20px;
+    overflow: auto;
+}

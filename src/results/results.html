@@ -1,0 +1,46 @@
+<template>
+    <require from="results/results.scss"></require>
+
+    <!-- Results wrapper -->
+    <div class="results_wrapper">
+
+    <!-- Error -->
+    <div class="error" if.bind="!results">
+        <h2>Error: no results.</h2>
+    </div>
+    <!-- end Error -->
+
+    <!-- Results -->
+    <div class="results_table" if.bind="results">
+        <table>
+
+            <!-- Thead -->
+            <thead>
+                <tr>
+                    <th>PA Id</th>
+                    <th>PA Title</th>
+                    <th>Total Users</th>
+                    <th>Events Count</th>
+                </tr>
+            </thead>
+            <!-- end Thead -->
+
+            <!-- Tbody -->
+            <tbody>
+                <tr repeat.for="result of results">
+                    <td>${result.dimensionValues[0].value}</td>
+                    <td>${result.dimensionValues[1].value}</td>
+                    <td>${result.metricValues[0].value}</td>
+                    <td>${result.metricValues[1].value}</td>
+                </tr>
+            </tbody>
+            <!-- end Tbody -->
+
+        </table>
+    </div>
+    <!-- end Results -->
+
+    </div>
+    <!-- end Results wrapper -->
+
+</template>

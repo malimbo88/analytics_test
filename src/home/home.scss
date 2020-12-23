@@ -1,0 +1,30 @@
+// Home
+.home_wrapper {
+    position: relative;
+    height: 100%;
+
+    .button_results {
+        background-color: #e62e00;
+        width: 200px;
+        height: 100px;
+        transition: all 0.1s ease-in-out;
+        color: #f2f2f2;
+        border: none;
+        outline: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        &:active, &:focus {
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            color: #f2f2f2;
+            background-color: #801a00;
+        }
+    }
+}
